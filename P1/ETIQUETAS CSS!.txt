@@ -333,5 +333,5 @@ div {
 }
 
 Con 'animation-name: example' indicamos que se realice la animación definida anteriormente y con 'animation-duration: 4s' indicamos 
-el tiempo de duracción de la misma. 
+el tiempo de duracción de la misma..
 

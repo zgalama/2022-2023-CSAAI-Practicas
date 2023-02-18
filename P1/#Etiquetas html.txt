@@ -1,7 +1,7 @@
 ETIQUETAS HTML!
 
 Los comentarios se escriben así:
-<!--.....-->
+<!--.......-->
 
 EN CABECERA:
 <link href= "URL"> especifica la localización del documento enlazado
