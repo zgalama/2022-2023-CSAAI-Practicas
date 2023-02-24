@@ -44,7 +44,7 @@ h2{
     
 .derecha {
     width: 70%;
-    padding-top: 0px;
+    padding-top: 40px;
     }
 
 .fila:after {
@@ -57,7 +57,7 @@ h2{
     font-family: "Minako";
     font-size: 50px;
     text-align: center;
-    padding: none;
+    
     text-shadow:2px 2px grey;
     display: block;
     background-color: beige;
@@ -69,12 +69,8 @@ h2{
     font-family: "Minako";
     font-size: 50px;
     text-align: center;
-    padding: none;
     text-shadow:2px 2px grey;
     display: block;
-    margin-top: none;
-    margin-bottom: none;
-   
     background-color: beige;
   
 }
@@ -83,7 +79,6 @@ h2{
     font-family: "Minako";
     font-size: 50px;
     text-align: center;
-    padding: none;
     display: block;
     text-shadow:2px 2px grey;
     background-color: beige;
@@ -131,8 +126,10 @@ h2{
 }
 
 ul.lis{
-    padding-left: 0px;;
+    padding-left: 0px;
+    
 }
+
 
 .cabecera{
     font-family: "Minako";
