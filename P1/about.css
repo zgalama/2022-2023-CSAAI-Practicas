@@ -1,0 +1,57 @@
+#nombre{
+    font-size: 80px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: black 5px solid;
+    border-radius: 13px;
+    background-color:rgba(97, 70, 34, 0.346)
+}
+
+
+body{
+    background-image: url(casanohara.jpg);
+    background-repeat:round;
+    width: 75%;
+    display: block;
+    margin: auto;
+    
+  
+}
+
+.video{
+    border: 0;
+    
+}
+div{
+    display: block;
+}
+
+.main{
+    border: black 5px solid;
+    border-radius: 15px;
+    background-color: rgba(129, 198, 211, 0.913);
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px grey;
+   
+}
+
+img {
+    width: 35%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.texto{
+    font-family: "Helvetica";
+    font-size: 24px;
+    text-align: center;
+    text-shadow:2px 2px grey;
+    border-bottom: none;
+   
+}
