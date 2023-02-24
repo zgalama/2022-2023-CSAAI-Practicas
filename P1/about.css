@@ -18,9 +18,14 @@ body{
   
 }
 
+iframe{
+    display: block;
+    margin: auto;
+}
 
 div{
     display: block;
+    
 }
 
 .main{
@@ -50,5 +55,12 @@ img {
     text-align: center;
     text-shadow:2px 2px grey;
     border-bottom: none;
+    margin-left: 5px;
    
+}
+
+#pie{
+    border-top: black 4px solid;
+    font-size: 25px;
+    text-align: center;
 }
