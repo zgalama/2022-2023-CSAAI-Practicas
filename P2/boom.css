@@ -1,0 +1,72 @@
+
+
+body{
+    background-color: gray;
+
+    text-align: center;
+   margin: auto;
+    width: 35%;
+    margin-top: 10%;
+
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+#secret {
+    font-size: 30px;
+    width: 100%;
+
+}
+    
+
+tr{
+    font-size: 60px;
+    border: black 2px solid;
+    background: purple;
+
+}
+
+td{
+    font-size: 60px;
+    border: black 2px solid;
+    background: purple;
+}
+
+
+div{
+    border: 2px solid;
+    background-color: black;
+
+}
+
+#crono{
+    background-color: purple;
+    border:none;
+    text-decoration: none;
+    display: inline-block;
+    cursor:pointer;
+    color:white;
+    font-size: 20px;
+
+}
+
+.b{
+    background-color: purple;
+    border:none;
+    text-decoration: none;
+    display: inline-block;
+    cursor:pointer;
+    color:white;
+    font-size: 25px;
+}
+
+
+#display{
+    font-size: 35px;
+    color:white;
+}
