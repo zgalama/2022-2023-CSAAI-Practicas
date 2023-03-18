@@ -58,15 +58,15 @@ gui.start.onclick = () => {
     crono.start();
 }
 //-- Adivinar un dígito
-let guess = ["*", "*", "*", "*"]; // arreglo para rastrear los dígitos adivinados
-let index = 0; // variable para rastrear en qué posición del arreglo estamos
+let guess = ["*", "*", "*", "*"];
+let index = 0; //cuenta cada vez que adivinemos una posicion del array
 for (let boton of gui.botones) {
     boton.onclick = (ev) => {
         console.log("Valor: " + ev.target.value);
         crono.start();
         let value = ev.target.value;
         i= 0;
-        // Si aún no hemos adivinado los 4 dígitos
+        // si aún no hemos adivinado los 4 dígitos
         if (index < 4 && secretkey.includes(value)) {
             // Si el dígito adivinado es correcto
                 // Iteramos el array secretkey para buscar el número adivinado
@@ -77,6 +77,7 @@ for (let boton of gui.botones) {
                         index+=1
                         // Agregamos el número adivinado al arreglo de guess
                         guess[i] = value;
+                        gui['S' + (i+1)].classList.add('nums');
                     }
                 }
 
