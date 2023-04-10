@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiro parabólico</title>
+
+    <!-- Hoja de estilo -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Código javascript -->
+    <script src="animacion2.js" defer></script>
+    <script src="crono.js"></script>
+
+</head>
+<body>
+<div class="responsive">
+    <div id="texto">
+        <p>El rey de los pimientos ha vuelto a hacer las suyas  y sólo tenemos
+            un tiro para poder derribarlo...  ¡Ayúdanos!
+        </p>
+    </div>
+    <div class="contenedor">
+    <canvas id="canvas"></canvas>
+    <img src="shin_chan.png" alt="icono shin chan" id="shin_chan">
+    <img src="karlos.png" alt ="icono karlos arguiñano" id="karlos">
+
+    </div>
+    
+    <div id="ajustes">
+    <div class="contenedor">
+        <p class="margen">Tiempo:</p>
+    <p id="display"> 0:0:0 </p>
+    </div>
+    <div class="contenedor">
+    <p class="margen"> Ángulo de disparo:</p>
+    <div>
+        <input type="range" id ="angulo" name="angulo"
+            min="0" max="90" ><span id="angulo_disp">45</span>
+    </div>
+    </div>
+    <div class="contenedor">
+    <p class="margen">Velocidad de disparo:</p>
+    <div>
+        <input type="range" id="veloci" name="veloci"
+            min="0" max="100"><span id="veloci_disp">50</span>
+    </div>
+    </div>
+    <div class="contenedor">
+    <input type="button" id="btnIniciar" value="Juevo nuevo">
+    <input type="button" id="btnLanzar" value="Lanzar">
+    </div>
+    </div>
+</div>
+</body>
+</html>
