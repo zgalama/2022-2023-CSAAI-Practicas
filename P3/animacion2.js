@@ -76,7 +76,7 @@ function lanzar()
     if (tirolanzado) {
         tiroP();
     }
-    if (((x > (xo -15)) && (x < (xo+15))) && (((yo +20) > y) && ((yo-20) <y))){
+    if (((x > (xo -20)) && (x < (xo+5))) && (((yo +20) > y) && ((yo-20) <y))){
         console.log("Ganar")
         crono.stop();
         ctx.font = "100px Verdana";
