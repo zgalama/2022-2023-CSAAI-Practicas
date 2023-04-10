@@ -79,9 +79,9 @@ function lanzar()
     if (((x > (xo -20)) && (x < (xo+5))) && (((yo +20) > y) && ((yo-20) <y))){
         console.log("Ganar")
         crono.stop();
-        ctx.font = "100px Verdana";
+        ctx.font = "60px Verdana";
         ctx.fillStyle = 'green';
-        ctx.fillText("¡Lo lograste!", 70, 230);
+        ctx.fillText("¡Lo lograste!", 175, 210);
         tirolanzado=false;
     }else if ((x >= u.canvas.width || x <= 0) || (y >= u.canvas.height || y <= 0 )){
         console.log("Perder")
