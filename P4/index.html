@@ -13,21 +13,35 @@
         <div class="game">
             <div class="controles">
                 <button>Comenzar</button>
+                <button> Reiniciar</button>
                 <div class="display">
                     <div class="movimientos">0 movimientos</div>
                     <div class="timer">tiempo: 0 sec</div>
                 </div>
             </div>
             <div class="grid-container">
-                <div class="tablero" grid-dimension="2">
+                <div> 
+                    <p>
+                        Elige la dimensión del tablero: 
+                        <input type="text" id ="opciones" list="dimen" placeholder="Dimensiones..."/>
+                        <span id="op_disp"></span>
+                            <!-- Lista de opciones -->
+                            <datalist id="dimen">
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="6">6</option>
+                            </datalist>
+                    </p>
+                </div>
+                <div class="tablero" grid-dimension="4">
                     <div class="card">
                         <div class="card-front"></div>
-                        <div class="card-back"><img src="shizuka.jpeg" alt ="no encontrada" id="shizuka"></div>
+                        <div class="card-back"></div>
                     </div>
 
                     <div class="card">
                         <div class="card-front"></div>
-                        <div class="card-back"><img src="suneo.jpeg" alt="no encontrada" id="suneo"></div>
+                        <div class="card-back"></div> 
                     </div>
 
                     <div class="card">
