@@ -15,6 +15,7 @@ const state = {
     loop: null
 }
 
+
 const generateGame = () => {
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
 
@@ -25,13 +26,13 @@ const generateGame = () => {
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
+    const images = ['suneo.jpeg', 'shizuka.jpeg', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
     // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
     // dimensiones entre dos, para asegurarnos de que cubrimos todas las cartas
-    const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
+    const picks = pickRandom(images, (dimensions * dimensions) / 2) 
 
     //-- Después descolocamos las posiciones para asegurarnos de que las parejas de cartas
     // están desordenadas.
@@ -44,7 +45,7 @@ const generateGame = () => {
             ${items.map(item => `
                 <div class="card">
                     <div class="card-front"></div>
-                    <div class="card-back">${item}</div>
+                    <div class="card-back"><img src=${item}id="img"></div>
                 </div>
             `).join('')}
        </div>
@@ -199,7 +200,6 @@ const flipBackCards = () => {
     // Ponemos el contado de parejas de cartas a cero
     state.flippedCards = 0
 }
-
 
 
 // Generamos el juego
