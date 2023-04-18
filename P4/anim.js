@@ -28,8 +28,8 @@ const generateGame = () => {
         throw new Error("Las dimensiones del tablero deben ser un número par.")
     }
 
-    //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const images = ['suneo.jpeg', 'shizuka.jpeg', 'doraemon.png', 'herdora.jpeg', 'nobita.jpeg', 'todos,jpeg']
+    //-- Creamos un array con las fotos que vamos a utilizar en nuestro juego
+    const images = ['cerdito.jpeg', 'doraemon.jpeg', 'Finn.jpeg', 'gigante.jpeg', 'gumball.png', 'herdora.jpeg', 'jake.png', 'sinchan.jpeg', 'sizuka.png', 'perry.jpeg', 'morty.jpeg', 'perry.jpeg', 'mark.jpeg', 'oliver.jpeg', 'pegasus.jpeg', 'toradora.jpeg', 'totoro.png', 'violet.jpeg']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
@@ -48,7 +48,7 @@ const generateGame = () => {
             ${items.map(items => `
                 <div class="card">
                     <div class="card-front"></div>
-                    <div class="card-back"><img src=${items}></div>
+                    <div class="card-back"><img src=${items} id="img"></div>
                 </div>
             `).join('')}
        </div>
@@ -215,3 +215,9 @@ generateGame()
 
 // Asignamos las funciones de callback para determinados eventos
 attachEventListeners()
+
+
+
+
+
+
