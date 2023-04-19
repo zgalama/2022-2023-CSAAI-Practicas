@@ -18,6 +18,10 @@ const state = {
 
 var dim_y = document.getElementById("dimen");
 var reseteo = document.getElementById("reseteo");
+reseteo.onclick = () =>{
+    location.reload();
+}
+    
 
 
 const generateGame = () => {
@@ -216,12 +220,3 @@ const flipBackCards = () => {
     state.flippedCards = 0
 }
 
-reseteo.onclick = () =>{
-    // Generamos el juego
-generateGame()
-
-// Asignamos las funciones de callback para determinados eventos
-attachEventListeners()
-    
-}
-    
