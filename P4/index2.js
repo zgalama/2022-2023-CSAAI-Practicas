@@ -15,13 +15,13 @@ const state = {
     loop: null
 }
 
+
 var dim_y = document.getElementById("dimen");
-var reseteo = document.getElementById("reseteo")
+var reseteo = document.getElementById("reseteo");
+
 
 const generateGame = () => {
-
     const dimensions = dim_y.value;
-
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -29,16 +29,14 @@ const generateGame = () => {
         throw new Error("Las dimensiones del tablero deben ser un número par.")
     }
 
-
-
-    //-- Creamos un array con las fotos que vamos a utilizar en nuestro juego
-    const images = ['cerdito.jpeg', 'doraemon.jpeg', 'Finn.jpeg', 'gigante.jpeg', 'gumball.png', 'herdora.jpeg', 'jake.png', 'sinchan.jpeg', 'sizuka.png', 'perry.jpeg', 'morty.jpeg', 'perry.jpeg', 'mark.jpeg', 'oliver.jpeg', 'pegasus.jpeg', 'toradora.jpeg', 'totoro.png', 'violet.jpeg']
+    //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
+    const emojis = ['☃️', '🍒', '🤗', '🚘', '🥕', '🍇', '🍉', '🇪🇨 ', '🥭', '🍍','🦂','😁','🦔','♏','🚾','🏐','🤝🏼','💃']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
     // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
     // dimensiones entre dos, para asegurarnos de que cubrimos todas las cartas
-    const picks = pickRandom(images, (dimensions * dimensions) / 2) 
+    const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
 
     //-- Después descolocamos las posiciones para asegurarnos de que las parejas de cartas
     // están desordenadas.
@@ -48,10 +46,10 @@ const generateGame = () => {
     //  todas las cartas en función de las dimensiones
     const cards = `
         <div class="tablero" style="grid-template-columns: repeat(${dimensions}, auto)">
-            ${items.map(items => `
+            ${items.map(item => `
                 <div class="card">
                     <div class="card-front"></div>
-                    <div class="card-back"><img src=${items} id="img"></div>
+                    <div class="card-back">${item}</div>
                 </div>
             `).join('')}
        </div>
@@ -88,7 +86,7 @@ const pickRandom = (array, items) => {
 }
 
 const shuffle = array => {
-    const clonedArray = [...array] //los '...' sirven para clonar
+    const clonedArray = [...array]
 
     // Intercambiamos las posiciones de los emojis al azar para desorganizar el array
     // así nos aseguramos de que las parejas de emojis no están consecutivas.
@@ -105,6 +103,7 @@ const shuffle = array => {
     return clonedArray
 }
 
+
 const attachEventListeners = () => {
     document.addEventListener('click', event => {
         // Del evento disparado vamos a obtener alguna información útil
@@ -117,8 +116,6 @@ const attachEventListeners = () => {
             flipCard(eventParent)
         // Pero si lo que ha pasado es un clic en el botón de comenzar lo que hacemos es
         // empezar el juego
-        } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
-            startGame()
         }
     })
 }
@@ -128,7 +125,6 @@ generateGame()
 
 // Asignamos las funciones de callback para determinados eventos
 attachEventListeners()
-
 
 
 const startGame = () => {
@@ -148,7 +144,6 @@ const startGame = () => {
         selectors.timer.innerText = `tiempo: ${state.totalTime} sec`
     }, 1000)
 }
-
 
 const flipCard = card => {
     // Sumamos uno al contador de cartas giradas
@@ -175,11 +170,10 @@ const flipCard = card => {
 
         // Si las cartas coinciden las marcamos como pareja 
         // añadiendo la clase correspondiente
-        if (flippedCards[0].innerTextHTML === flippedCards[1].innerTextHTML) {
+        if (flippedCards[0].innerText === flippedCards[1].innerText) {
             flippedCards[0].classList.add('matched')
             flippedCards[1].classList.add('matched')
         }
-        console.log(flippedCards);
 
         // Arrancamos un temporizador que comprobará si tiene
         // que volver a girar las cartas porque no hemos acertado
@@ -210,6 +204,8 @@ const flipCard = card => {
         }, 1000)
     }
 }
+
+
 const flipBackCards = () => {
     // Seleccionamos las cartas que no han sido emparejadas
     // y quitamos la clase de giro
@@ -220,11 +216,12 @@ const flipBackCards = () => {
     state.flippedCards = 0
 }
 
+reseteo.onclick = () =>{
+    // Generamos el juego
+generateGame()
 
-
-
-
-
-
-
-
+// Asignamos las funciones de callback para determinados eventos
+attachEventListeners()
+    
+}
+    

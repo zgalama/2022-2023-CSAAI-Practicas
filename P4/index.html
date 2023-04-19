@@ -7,13 +7,13 @@
         <title> Memory </title>
 
         <link rel="stylesheet" href="style.css" />
-        <script src="anim.js" defer></script>
+        <script src="index2.js" defer></script>
     </head>
     <body>
         <div class="game">
             <div class="controles">
                 <button>Comenzar</button>
-                <button> Reiniciar</button>
+                <button id="reseteo"> Reiniciar</button>
                 <div class="display">
                     <div class="movimientos">0 movimientos</div>
                     <div class="timer">tiempo: 0 sec</div>
@@ -23,17 +23,15 @@
                 <div> 
                     <p>
                         Elige la dimensión del tablero: 
-                        <input type="text" id ="opciones" list="dimen" placeholder="Dimensiones..."/>
-                        <span id="op_disp"></span>
                             <!-- Lista de opciones -->
-                            <datalist id="dimen">
-                                <option value="2">2</option>
-                                <option value="4">4</option>
-                                <option value="6">6</option>
-                            </datalist>
+                        <select name="select" id="dimen">
+                            <option value="2">2</option>
+                            <option value="4" selected>4</option>
+                            <option value="6">6</option>
+                        </select><br>
                     </p>
                 </div>
-                <div class="tablero" grid-dimension="6">
+                <div class="tablero">
                     <div class="card">
                         <div class="card-front"></div>
                         <div class="card-back"></div>
