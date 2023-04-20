@@ -3,8 +3,9 @@
     src: url(Talk\ Comic.ttf);
 }
 
-
-html {
+body{
+    background-image: url(fondo.jpg);
+    background-size:cover;
     width: 100%;
     height: 100%;
     /* background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%); */
@@ -12,16 +13,21 @@ html {
 }
 
 .game {
+    border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(250, 235, 215, 0.521);
 }
 
-.controls {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+.controles {
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(175, 56, 48, 0.932);
+    align-items: center;
+    display:grid;
+    border-radius: 5px;
 }
 
 button {

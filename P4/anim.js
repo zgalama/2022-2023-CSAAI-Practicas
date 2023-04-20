@@ -18,6 +18,27 @@ const state = {
 var dim_y = document.getElementById("dimen");
 var reseteo = document.getElementById("reseteo")
 
+const reiniciar = () => {
+    state.gameStarted = false;
+    state.flippedCards = 0;
+    state.totalFlips = 0;
+    state.totalTime = 0;
+    //clearInterval(state.loop);ç    
+    generateGame();
+    attachEventListeners();
+     selectors.gridContainer.classList.remove('flipped');
+    selectors.comenzar.classList.remove('disabled');
+    document.querySelectorAll('.card').forEach(card => {
+       card.classList.remove('flipped')
+     })
+
+}
+
+reseteo.onclick = () => {
+    reiniciar();
+}
+
+
 const generateGame = () => {
 
     const dimensions = dim_y.value;
@@ -136,7 +157,6 @@ const startGame = () => {
     state.gameStarted = true
     // Desactivamos el botón de comenzar
     selectors.comenzar.classList.add('disabled')
-    reseteo.classList.add('disabled')
 
     // Comenzamos el bucle de juego
     // Cada segundo vamos actualizando el display de tiempo transcurrido
@@ -175,7 +195,7 @@ const flipCard = card => {
 
         // Si las cartas coinciden las marcamos como pareja 
         // añadiendo la clase correspondiente
-        if (flippedCards[0].innerTextHTML === flippedCards[1].innerTextHTML) {
+        if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
             flippedCards[0].classList.add('matched')
             flippedCards[1].classList.add('matched')
         }
@@ -187,7 +207,7 @@ const flipCard = card => {
         // y para eso llamamos a la función flipBackCards()
         setTimeout(() => {
             flipBackCards()
-        }, 1000)
+        }, 700)
     }
 
     // Antes de terminar, comprobamos si quedan cartas por girar
@@ -219,7 +239,6 @@ const flipBackCards = () => {
     // Ponemos el contado de parejas de cartas a cero
     state.flippedCards = 0
 }
-
 
 
 
